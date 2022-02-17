@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+.app-header {
+    width:70vw;
+    height:10vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:auto;
+
+    .logo {
+        font-size: 1.2rem;
+        font-family:'Merriweather', sans-serif;
+        font-weight: bold;
+    }
+
+    .white {
+        transition:all .3s ease;
+        color:white;
+        z-index:6;
+    }
+
+    .menu {
+        position:fixed;
+        top:0;
+        left:0;
+        height:100vh;
+        width:100vw;
+        z-index:4;
+        color:#fff;
+        background:#000;
+        transition:all .6s ease;
+        transform:translateX(110%);
+        display:flex;
+        justify-content: center;
+
+        .list-container {
+            width:45vw;
+            height:50%;
+            font-size:1.5rem;
+            padding:20vh;
+
+            .main-item {
+                margin:2rem 0;
+                max-width:max-content;
+                position:relative;
+                cursor:pointer
+            }
+
+            .sub-item {
+                margin:1.5rem 0;
+                max-width:max-content;
+                position:relative;
+                cursor:pointer;
+                font-size:.8rem;
+            }
+
+            .sub-list {
+                transition:all .3s ease;
+                display:none;
+            }
+
+            .list-active {
+                display:block;
+            }
+        }
+
+        .flashimage-container {
+            height:100%;
+            width:40vw;
+            display:grid;
+            place-items:center;
+
+            .furniture {
+                height:60vh;
+                position:absolute
+            }
+        }
+    }
+
+    .burger {
+        width:2.1rem;
+        height:2.1rem;
+        border:1px solid #ccc;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-items:center;
+        z-index:6;
+        position:relative;
+
+        .line {
+            background:#000;
+            height:.083rem;
+            width:50%;
+            transition:all .6s ease;
+        }
+
+        .top {
+            width:50%;
+        }
+
+        .middle {
+            width:30%;
+            align-self: flex-start;
+            margin-left:25%;
+        }
+
+        .bottom {
+            width:20%;
+            align-self:flex-end;
+            margin-right:25%;
+        }
+
+        .white {
+            background:#fff;
+            color:white;
+        }
+
+        .top-active {
+            transform:rotate(-45deg);
+            position:absolute;
+            width:65%;
+        }
+
+        .middle-active {
+            transform: rotate(45deg);
+            width:30%
+        }
+
+        .bottom-active {
+            transform:rotate(50deg);
+            width:20%;
+        }
+    }
+
+    .active {
+        transition:all .45s ease;
+        transform: translateX(0%);
+    }
+
+    .open {
+        position:relative;
+        z-index:5;
+        border:1px solid #fff;
+    }
+
+    .contact-list {
+        display:flex;
+        font-size:.7rem;
+        color:#ccc;
+        position:relative;
+        top:20vh;
+
+        li {
+            margin:.5rem .5rem;
+            cursor:pointer;
+
+            &:hover {
+                color:#eee;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    body {
+        overflow-x:hidden;
+    }
+
+    .app-header {
+        width:100vw;
+        height:12vh;
+        justify-content:space-around;
+    }
+
+    .menu {
+        flex-direction:column;
+        max-width:100vw;
+        height:100vh;
+        position:fixed;
+        transform: translateX(30%);
+
+        .list-container {
+            max-width:100%;
+            height:100%;
+            padding:0;
+            margin:0;
+            font-size:.8rem;
+            display:grid;
+            place-items:center;
+            margin-left:-10vw;
+
+            .main-list {
+                width:100vw;
+                height:50%;
+                padding:0;
+
+                .main-item {
+                    font-size:1.4rem;
+                }
+            }
+
+            .contact-list {
+                display:flex;
+                width:100vw;
+            }
+        }
+
+        .flashimage-container {
+            display:none;
+        }
+    }
+
+    .active {
+        transform:translateX(0%)
+    }
+}

@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap");
+.app-header {
+  width: 70vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.app-header .logo {
+  font-size: 1.2rem;
+  font-family: 'Merriweather', sans-serif;
+  font-weight: bold;
+}
+
+.app-header .white {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  color: white;
+  z-index: 6;
+}
+
+.app-header .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 4;
+  color: #fff;
+  background: #000;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app-header .menu .list-container {
+  width: 45vw;
+  height: 50%;
+  font-size: 1.5rem;
+  padding: 20vh;
+}
+
+.app-header .menu .list-container .main-item {
+  margin: 2rem 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
+  cursor: pointer;
+}
+
+.app-header .menu .list-container .sub-item {
+  margin: 1.5rem 0;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
+  cursor: pointer;
+  font-size: .8rem;
+}
+
+.app-header .menu .list-container .sub-list {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  display: none;
+}
+
+.app-header .menu .list-container .list-active {
+  display: block;
+}
+
+.app-header .menu .flashimage-container {
+  height: 100%;
+  width: 40vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.app-header .menu .flashimage-container .furniture {
+  height: 60vh;
+  position: absolute;
+}
+
+.app-header .burger {
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 6;
+  position: relative;
+}
+
+.app-header .burger .line {
+  background: #000;
+  height: .083rem;
+  width: 50%;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+.app-header .burger .top {
+  width: 50%;
+}
+
+.app-header .burger .middle {
+  width: 30%;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  margin-left: 25%;
+}
+
+.app-header .burger .bottom {
+  width: 20%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-right: 25%;
+}
+
+.app-header .burger .white {
+  background: #fff;
+  color: white;
+}
+
+.app-header .burger .top-active {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  width: 65%;
+}
+
+.app-header .burger .middle-active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 30%;
+}
+
+.app-header .burger .bottom-active {
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+  width: 20%;
+}
+
+.app-header .active {
+  -webkit-transition: all .45s ease;
+  transition: all .45s ease;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.app-header .open {
+  position: relative;
+  z-index: 5;
+  border: 1px solid #fff;
+}
+
+.app-header .contact-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: .7rem;
+  color: #ccc;
+  position: relative;
+  top: 20vh;
+}
+
+.app-header .contact-list li {
+  margin: .5rem .5rem;
+  cursor: pointer;
+}
+
+.app-header .contact-list li:hover {
+  color: #eee;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    overflow-x: hidden;
+  }
+  .app-header {
+    width: 100vw;
+    height: 12vh;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100vw;
+    height: 100vh;
+    position: fixed;
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  .menu .list-container {
+    max-width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: .8rem;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    margin-left: -10vw;
+  }
+  .menu .list-container .main-list {
+    width: 100vw;
+    height: 50%;
+    padding: 0;
+  }
+  .menu .list-container .main-list .main-item {
+    font-size: 1.4rem;
+  }
+  .menu .list-container .contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+  .menu .flashimage-container {
+    display: none;
+  }
+  .active {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+/*# sourceMappingURL=Layout.css.map */

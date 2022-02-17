@@ -1,0 +1,78 @@
+.pagination {
+    position: fixed;
+    z-index:3;
+    bottom:0;
+    left:15vw;
+    width:75vw;
+    height:12vh;
+    background:#f7f7f7;
+
+    .pagination-controller {
+        height:100%;
+        background:none;
+        outline: none;
+        border:none;
+        padding:1rem 4rem 1rem 0;
+        text-align: left;
+        cursor:pointer;
+        background:#f5f5f5;
+
+        span {
+            font-size:.8rem;
+            opacity:.6;
+        }
+
+        p {
+            font-size:1rem;
+        }
+    }
+
+    .active {
+        &::before {
+            animation:activeController .8s linear;
+            content: "";
+            height:2px;
+            background:black;
+            width:6rem;
+            position: absolute;
+            margin:-.6rem 0;
+        }
+
+        p {
+            font-weight:bold;
+        }
+    }
+}
+
+@keyframes activeController {
+    from {
+        width:0;
+        background:white;
+    }
+
+    to {
+        width:6rem;
+        background:black;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .pagination {
+        width:100vw;
+        height:12vh;
+        position:absolute;
+        bottom:0;
+        left:0;
+        z-index:1;
+        margin:0;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+
+        .pagination-controller {
+            padding: 1rem 1rem 0 1rem;
+            margin:0;
+            height:100%;
+        }
+    }
+}
